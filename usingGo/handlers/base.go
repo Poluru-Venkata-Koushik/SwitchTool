@@ -2,7 +2,7 @@ package handlers
 
 import (
 	"net/http"
-	"SwitchTool/db"
+	_ "SwitchTool/DB"
 	"github.com/gin-gonic/gin"
 )
 
@@ -18,7 +18,7 @@ func RootHandler (ctx *gin.Context){
 func GetAllDevices (ctx *gin.Context){
 	ctx.JSON(
 		http.StatusOK,
-		db.Inventory,
+		nil,
 	)
 }
 
